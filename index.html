@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with uwem landing page.">
     <meta name="author" content="Devcrud">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="zHckDbqC"></script>
+
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery_custom.js"></script>
     <title>uwem Landing page | Free Bootstrap 4.3.x landing page</title>
@@ -100,54 +103,87 @@
     
 
     <!-- service section -->
-    <section class="section" id="video">
+    <section class="section" id="video"> 
         <div class="container text-center">
             <p class="section-subtitle">Watch</p>
-            <h6 class="section-title mb-6">VIdeos</h6>
+            <h6 class="section-title mb-6">Videos</h6>
             <!-- row -->
             <div class="row">
+                <!-- First Video Card (YouTube) -->
                 <div class="col-md-4">
-                    <div class="portfolio-card">
-                        <!-- YouTube Video Thumbnail -->
-                        <img src="https://img.youtube.com/vi/teI2aO7Ij4I/hqdefault.jpg" class="portfolio-card-img" alt="Video 1">
+                    <div class="portfolio-card video-card">
+                        <img src="https://img.youtube.com/vi/teI2aO7Ij4I/hqdefault.jpg" class="portfolio-card-img video-thumb" alt="Video 1">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
                                 <h4>Highlight</h4>
-                                <p class="font-weight-normal">Author: Youtube</p>
-                                <!-- Play button instead of Preview -->
+                                <p class="font-weight-normal">Author: YouTube</p>
                                 <button class="btn btn-primary play-video" data-video-id="teI2aO7Ij4I">Play</button>
                             </span>
                         </span>
                     </div>
                 </div>
     
-                <!-- Second Video Card -->
+                <!-- Second Video Card (YouTube) -->
                 <div class="col-md-4">
-                    <div class="portfolio-card">
-                        <!-- YouTube Video Thumbnail -->
-                        <img src="https://img.youtube.com/vi/HAlh4ESuH_s/hqdefault.jpg" class="portfolio-card-img" alt="Video 2">
+                    <div class="portfolio-card video-card">
+                        <img src="https://img.youtube.com/vi/HAlh4ESuH_s/hqdefault.jpg" class="portfolio-card-img video-thumb" alt="Video 2">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
                                 <h4>Bayern Munich</h4>
-                                <p class="font-weight-normal">Author: Youtube</p>
-                                <!-- Play button instead of Preview -->
+                                <p class="font-weight-normal">Author: YouTube</p>
                                 <button class="btn btn-primary play-video" data-video-id="HAlh4ESuH_s">Watch</button>
                             </span>
                         </span>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Video Player Section (Appears when button is clicked) -->
-            <div class="row mt-4" id="videoPlayerSection" style="display: none;">
-                <div class="col-md-12">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe id="youtubeVideo" class="embed-responsive-item" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+                <!-- Third Video Card (Facebook) -->
+                <div class="col-md-4">
+                    <div class="portfolio-card video-card">
+                        <!-- Facebook Video Embed -->
+                        <div class="fb-video video-thumb" data-href="https://www.facebook.com/facebook/videos/10153231379946729/" data-width="500" data-show-text="false">
+                            <blockquote cite="https://www.facebook.com/facebook/videos/10153231379946729/" class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/facebook/videos/10153231379946729/">Watch on Facebook</a>
+                            </blockquote>
+                        </div>
+                        <h4>Facebook</h4>
+                        <p class="font-weight-normal">Author: Uwem Useh</p>
                     </div>
-                    <!-- Close button for video -->
-                    <button id="closeVideo" class="btn btn-danger mt-3">Close Video</button>
                 </div>
             </div>
+        </div>
+    </section>
+    
+    
+    
+    <!-- Script for handling video play -->
+    <script>
+        document.querySelectorAll('.play-video').forEach(button => {
+            button.addEventListener('click', function() {
+                let videoId = this.getAttribute('data-video-id');
+                let platform = this.getAttribute('data-platform');
+                let videoUrl = '';
+    
+                if (platform === 'youtube') {
+                    videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                } else if (platform === 'facebook') {
+                    videoUrl = `https://www.facebook.com/video/embed?video_id=${videoId}`;
+                }
+    
+                // Show video player
+                document.getElementById('videoPlayerSection').style.display = 'block';
+                document.getElementById('videoPlayer').src = videoUrl;
+            });
+        });
+    
+        // Close video player
+        document.getElementById('closeVideo').addEventListener('click', function() {
+            document.getElementById('videoPlayerSection').style.display = 'none';
+            document.getElementById('videoPlayer').src = '';
+        });
+    </script>
+    
+    
        
     
     
