@@ -68,6 +68,30 @@ $(document).ready(function () {
         $(this).hide();
     });
 
+
+     // Handle "Play Video" button click for Facebook
+     $('.fb-video').on('click', function () {
+        var videoUrl = $(this).data('href');
+
+        // Set the video URL in the iframe
+        $('#facebookVideo').attr('src', videoUrl);
+
+        // Position the video player section near the clicked button
+        var offset = $(this).offset();
+        $('#videoPlayerSection').css({
+            top: offset.top,
+            left: offset.left + $(this).outerWidth(),
+            position: 'absolute'
+        }).show();
+
+        // Show the video player section
+        $('#videoPlayerSection').show();
+
+        // Hide the thumbnail and button after clicking
+        $(this).closest('.portfolio-card').find('img').hide();
+        $(this).hide();
+    });
+
     // Handle "Close Video" button click
     $('#closeVideo').on('click', function () {
         // Stop the video by removing the iframe src
