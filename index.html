@@ -11,9 +11,11 @@
 
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery_custom.js"></script>
-    <title>uwem Landing page | Free Bootstrap 4.3.x landing page</title>
+    <title>uwem Useh</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/bootstrap.css">
     <!-- Bootstrap + uwem main styles -->
     <link rel="stylesheet" href="assets/css/uwem.css">
 </head>
@@ -150,6 +152,20 @@
                         <p class="font-weight-normal">Author: Uwem Useh</p>
                     </div>
                 </div>
+                    <!-- Fourth Video Card (YouTube) -->
+<div class="col-md-4">
+    <div class="portfolio-card video-card">
+        <img src="https://img.youtube.com/vi/2CN2y3d6pA8/hqdefault.jpg" class="portfolio-card-img video-thumb" alt="Video 4">
+        <span class="portfolio-card-overlay">
+            <span class="portfolio-card-caption">
+                <h4>New Video</h4>
+                <p class="font-weight-normal">Author: YouTube</p>
+                <button class="btn btn-primary play-video" data-video-id="2CN2y3d6pA8">Watch</button>
+            </span>
+        </span>
+    </div>
+</div>
+
             </div>
         </div>
     </section>
@@ -409,11 +425,16 @@
     
 
 
-
+    <div id="videoPlayerSection" style="display:none; width: 560px; height: 315px;">
+        <div class="embed-responsive embed-responsive-16by9" style="width: 100%; height: 100%;">
+            <iframe class="embed-responsive-item" id="youtubeVideo" src="" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+        </div>
+        <button id="closeVideo" class="btn btn-secondary" style="position: absolute; top: 10px; right: 10px;">Close Video</button>
+    </div>
   
 
  <!-- core  -->
- <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+ <!-- <script src="assets/vendors/jquery/jquery-3.4.1.js"></script> -->
  <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 
  <!-- bootstrap 3 affix -->
@@ -421,6 +442,7 @@
 
  <!-- uwem js -->
  <script src="assets/js/uwem.js"></script>
+ 
 
 
 </body>

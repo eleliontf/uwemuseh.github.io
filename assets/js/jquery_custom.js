@@ -51,6 +51,15 @@ $(document).ready(function () {
         // Set the video URL in the iframe
         $('#youtubeVideo').attr('src', videoUrl);
 
+
+        // Position the video player section near the clicked button
+        var offset = $(this).offset();
+        $('#videoPlayerSection').css({
+            top: offset.top,
+            left: offset.left + $(this).outerWidth(),
+            position: 'absolute'
+        }).show();
+
         // Show the video player section
         $('#videoPlayerSection').show();
 
