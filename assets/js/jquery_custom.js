@@ -106,3 +106,27 @@ $(document).ready(function () {
     });
 });
 
+
+$(document).ready(function () {
+    // Handle "Play Video" button click for YouTube
+    $('.play-video').on('click', function () {
+        var videoId = $(this).data('video-id');
+        var videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+        // Set the video URL in the iframe
+        $('#youtubeVideo').attr('src', videoUrl);
+
+        // Show the video player modal
+        $('#videoModal').modal('show');
+    });
+
+    // Handle modal close event to stop the video and show the thumbnail and play button again
+    $('#videoModal').on('hidden.bs.modal', function () {
+        // Stop the video by removing the iframe src
+        $('#youtubeVideo').attr('src', '');
+
+        // Show the thumbnail and play button again
+        $('.portfolio-card img').show();
+        $('.portfolio-card .play-video').show();
+    });
+});
