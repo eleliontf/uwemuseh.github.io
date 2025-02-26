@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- HELLO -->
+<html class="html" lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/styles.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+</head>
+<body class="container-fluid" style="padding: 0;">
+    <!-- =============NAVBAR STARTS============== -->
+    <nav class="navbar navbar-expand-lg navbar-dark  nav__bar">
+        <div class="container-fluid" >
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" class="logo__img"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active a" aria-current="page" href="index.html" onmouseover=" this.style.color='gold';"  onmouseout=" this.style.color='white';">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active a" href="event.html" onmouseover=" this.style.color='gold';"  onmouseout=" this.style.color='white';">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active a" href="artist.html" onmouseover=" this.style.color='gold';"  onmouseout=" this.style.color='white';">About Me</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h3 style="margin-top: 50px;" align="center">
+        LYRICS TO THE “HYMNS OF PRAISE ALBUM”
+    </h3>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <section class="pdf-reader" >
+                    <div class="pdf-container" id="pdf-container"></div>
+                </section>
+                <div class="buy-prompt text-center mt-3">
+                    <a href="https://www.amazon.com" target="_blank">
+                        <button class="btn " style="color: white; background-color: goldenrod;" onmouseover=" this.style.backgroundColor='black';"  onmouseout=" this.style.backgroundColor='goldenrod'">Buy on Amazon</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <h2 style="color: #0693e3;">Hymns</h2>
+        <ul style="list-style: none;">
+            <li><a href="a_hymn_of_praise_with_sofa_notation.html"><p style="text-decoration: underline;">A hymn of Praise with Sofa Notation </p></a></li>
+            <li><a href="worthy_is_the_lamb.html"><p style="text-decoration: underline;">Worthy is the Lamb </p></a></li>
+            <li><a href="wonders_wrapped_in_winter.html"><p style="text-decoration: underline;">Wonder Wrapped in Winter </p></a></li>
+        </ul>
+    </div>
+
+    <footer class="bg text-center text-lg-start" style="position: relative;">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">UWEM USEH</h5>
+                    <p>Sir Uwem Jonah Useh is an indigene of Ikot Umo Essien Village, Odoro Ikot Clan in Essien Udim L.G.A of Akwa Ibom State, Nigeria.</p>
+                    <p>© Uwem Jonah Useh | All rights reserved</p>
+                    <p><a href="http://www.aidoko.com.ng">Built by aidoko.com.ng</a></p>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Join Our Newsletter</h5>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <button type="submit" class="btn" style="background-color: goldenrod; color: white;" >JOIN OUR NEWSLETTER</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <h5 class="text-uppercase">Social | Play</h5>
+                    <a href="#" class="btn btn-outline-dark btn-floating m-1" role="button"><i class="fab fa-spotify"></i></a>
+                    <a href="#" class="btn btn-outline-dark btn-floating m-1" role="button"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="btn btn-outline-dark btn-floating m-1" role="button"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="btn btn-outline-dark btn-floating m-1" role="button"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="btn btn-outline-dark btn-floating m-1" role="button"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="btn btn-outline-dark btn-floating m-1" role="button"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var url = 'path/Lyrics_hymns_of_praise_album.pdf'; // Ensure this path is correct
+            var pdfDoc = null;
+            var scale = 1.5;
+            var container = document.getElementById('pdf-container');
+
+            function renderPage(page) {
+                var viewport = page.getViewport({ scale: scale });
+                var canvas = document.createElement('canvas');
+                var ctx = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                canvas.classList.add('pdf-page');
+
+                var renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+                page.render(renderContext);
+
+                container.appendChild(canvas);
+            }
+
+            pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+                pdfDoc = pdfDoc_;
+                for (var num = 1; num <= pdfDoc.numPages; num++) {
+                    pdfDoc.getPage(num).then(renderPage);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
