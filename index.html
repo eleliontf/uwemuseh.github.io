@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- HELLO -->
 <html class="html" lang="en-US" prefix="og: https://ogp.me/ns#">
+
 <head>
 	<meta charset="UTF-8">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -12,7 +13,120 @@
 
 <meta property="og:locale" content="en_US" />
 
+ <style>
+  /* Styling for the clickable phrase */
+  .modal-trigger {
+    color: #e63946; /* Matches your red theme */
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .modal-trigger:hover {
+    color: #c92a36;
+  }
 
+  /* Modal Background Overlay */
+  .custom-modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darkens the background */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Modal Box */
+  .custom-modal-content {
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: left;
+    max-height: 80vh;
+    overflow-y: auto; /* Adds scroll if text is long */
+  }
+
+  /* Close Button (X) */
+  .custom-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .custom-modal-close:hover {
+    color: #e63946;
+  }
+</style>
+ <style>
+  /* Styling the container and justified text */
+  .bio-container {
+    text-align: justify;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+
+  /* Hide the checkbox that controls the toggle */
+  .read-more-state {
+    display: none;
+  }
+
+  /* Hide the extra content by default */
+  .read-more-target {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: all 0.3s ease;
+    display: none; /* Keeps it completely hidden from screen readers/layout until toggled */
+  }
+
+  /* When the checkbox is checked, reveal the extra content */
+  .read-more-state:checked ~ .read-more-wrap .read-more-target {
+    opacity: 1;
+    max-height: 2000px;
+    font-size: inherit;
+    display: inline; /* Or block depending on element */
+  }
+
+  /* Change button text dynamically */
+  .read-more-state:checked ~ .btn-more::before {
+    content: "Read Less";
+  }
+
+  .read-more-state:not(:checked) ~ .btn-more::before {
+    content: "Read More";
+  }
+
+  /* The Red Button Styling */
+  .btn-more {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 5px 12px;
+    /* border-radius: 4px; */
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn-more:hover {
+    background-color: #2a2ac9;
+  }
+</style>
 
 
 <!-- /Rank Math WordPress SEO plugin -->
@@ -630,27 +744,93 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
 				</div>
 				<div class="elementor-element elementor-element-6442ae28 elementor-widget elementor-widget-text-editor" data-id="6442ae28" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-							<p>
-								Sir Uwem Jonah Useh is a renowned environmental professional and musician. Born in Ikot Umo Essien Village, Akwa Ibom State, Nigeria, he has over 20 years of experience in environmental resources management and climate change mitigation.
+							<p style="text-align: justify;">
+								Sir Uwem Jonah Useh, Ph.D. is a Nigerian hymn writer, author, music director and passionate advocate for the preservation and renewal of Christian hymnody. A Knight of Charles Wesley (KCW), he combines his professional career in environmental management, climate change and public service with a growing ministry dedicated to the heritage and future of Christian hymns.
+							</p>			
+<div class="bio-container">
+  <!-- Hidden checkbox that tracks state -->
+  <input type="checkbox" id="expand-btn" class="read-more-state">
 
-As Assistant Director and former Head of Climate Change Mitigation at the Federal Ministry of Environment, Nigeria, he coordinated several national projects. He is also the Director of Music at the Methodist Church Nigeria, Diocese of Kubwa, Abuja, and has composed several gospel anthems and hymns.
+  <!-- Visible text (Always shows) -->
+  <div class="read-more-wrap">
+    <p>
+		He is the Founder of the Festival of <span class="modal-trigger" onclick="openModal()">Festival of 12 Hymns</span>, an initiative established to promote the appreciation, preservation, teaching and performance of Christian hymns. The Festival held its inaugural edition in January 2025 and its second edition in January 2026. The 3rd Edition, themed “The Legacy of Hymnody,” is scheduled for January 2027.
+    </p>
 
-Sir Uwem has received several awards, including the Best Creative and Innovative Writer in the Federal Civil Service of Nigeria (2016) and the Knight of Charles Wesley, KCW (2018). He is married to Lady Mercy, Ph.D., and they have three children.
-							</p>						</div>
+    <!-- Hidden text that appears when clicked -->
+    <span class="read-more-target">
+      <p>
+        Through the Festival and his literary and musical works, Sir Uwem seeks to reconnect contemporary Christians, particularly younger generations, with the theological depth, poetic beauty, history and spiritual significance of hymns. His conviction is that hymns are not merely songs of worship, but treasured expressions of Christian faith, doctrine, testimony and heritage.
+      </p>
+      <p>
+        He is the author of <em>Abiding Grace Hymns & Anthems</em>, a collection of original and curated Christian musical works, and <em>Abiding Grace Hymnal</em>, which explores the stories, messages and spiritual significance of treasured Christian hymns. His work reflects a commitment not only to writing and preserving hymns but also to ensuring that their enduring truths remain relevant to contemporary worship.
+      </p>
+      <p>
+        As Music Director of the Methodist Diocese of Kubwa, Sir Uwem continues to contribute to choral music, congregational singing and Christian musical formation. Through his compositions, publications, concerts and hymnody initiatives, he is helping to build a renewed appreciation of hymnody as an essential part of the Church's spiritual and cultural heritage.
+      </p>
+      <p>
+        Professionally, Sir Uwem is a public-sector specialist with experience in environmental management, climate change, sustainable development, economic planning and public-private partnerships, but his work in hymnody represents a distinctive expression of his faith, creativity and service to the Church.
+      </p>
+
+      <p><b>His Vision</b></p>
+      <p>
+        To preserve the treasures of Christian hymnody, inspire a new generation of hymn lovers, and ensure that the timeless truths of the hymns continue to teach, unite, strengthen and inspire the Church.
+      </p>
+    </span>
+  </div>
+  <!-- The Modal Structure -->
+<div id="festivalModal" class="custom-modal-overlay">
+  <div class="custom-modal-content">
+    <button class="custom-modal-close" onclick="closeModal()">&times;</button>
+    
+    <h3 style="color: #e63946; margin-top: 0;">Festival of 12 Hymns Network</h3>
+    
+    <p style="text-align: justify; line-height: 1.6;">
+<b>THE FESTIVAL OF 12 HYMNS IN BRIEF</b> <br>
+The Festival of 12 Hymns is a Christian hymnody initiative founded by Sir Uwem Jonah Useh, Ph.D., KCW, dedicated to celebrating, preserving and promoting the rich heritage of Christian hymns. The Festival seeks to renew appreciation for hymnody as a powerful expression of Christian faith, doctrine, worship and spiritual heritage, while encouraging younger generations to discover and embrace the timeless messages of the hymns.
+The inaugural edition was held in January 2025, followed by the second edition in January 2026, themed “The Treasure of Hymnody.” The 3rd Edition, scheduled for January 2027, is themed “The Legacy of Hymnody.”
+Through its annual concert, publications, hymn writing, choral music and related activities, the Festival provides a platform for choirs, hymn writers, musicians, churches and hymn lovers to celebrate and sustain the tradition of Christian hymnody.
+Vision
+To preserve the treasures of Christian hymnody and inspire future generations through the timeless message and beauty of Christian hymns.
+    </p>
+    
+    <p style="text-align: justify; line-height: 1.6;">
+      <strong>Key Milestones:</strong>
+      <ul style="text-align: left; line-height: 1.5;">
+        <li><strong>January 2025:</strong> Inaugural Edition</li>
+        <li><strong>January 2026:</strong> Second Edition</li>
+        <li><strong>January 2027:</strong> 3rd Edition (Themed: “The Legacy of Hymnody”)</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+<!-- Simple JavaScript to open and close the modal -->
+<script>
+  function openModal() {
+    document.getElementById('festivalModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('festivalModal').style.display = 'none';
+  }
+
+  // Close modal automatically if the user clicks outside the white box
+  window.onclick = function(event) {
+    let modal = document.getElementById('festivalModal');
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>
+
+  <!-- The Red Button Label linked to the checkbox -->
+  <label for="expand-btn" class="btn-more"></label>
+</div>
+							
 				</div>
-				<div class="elementor-element elementor-element-496a3430 elementor-widget elementor-widget-button" data-id="496a3430" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="artist.html"  rel="noopener">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-icon">
-				<i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i>			</span>
-									<span class="elementor-button-text">Continue reading</span>
-					</span>
-					</a>
 				</div>
-						</div>
-				</div>
+				
 					</div>
 		</div>
 				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-435e55aa" data-id="435e55aa" data-element_type="column">
